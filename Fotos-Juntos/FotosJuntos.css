@@ -1,0 +1,86 @@
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 600px;
+  scroll-snap-align: center;
+}
+
+ img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: transparent;
+  border: none;
+  color: #AD7BE9;
+  font-size: 3rem;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.5;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+#move-button {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  background-color: #c20b2e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+#move-button:hover {
+  background-color: #a80a25;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+#contenedor{
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFkMWM1NWIzMjMzYjE4OWJiNzAzOWQ3YWIyZjlkMTY1MGFiNmYxMiZjdD1n/3odxXG6oUNRVhsdcLK/giphy.gif');
+}
