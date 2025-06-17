@@ -1,0 +1,29 @@
+name: Mi Primer Workflow de Aprendizaje
+
+on: [push] # Se dispara con cada push a cualquier rama
+
+jobs:
+  saludar-y-simular:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Decir Hola desde el Runner
+        run: |
+          echo "Hola, ¡este es mi primer workflow de GitHub Actions!"
+          echo "Estoy ejecutándose en un Runner de tipo ${{ runner.os }}" # Una variable de contexto
+          echo "La fecha y hora actual es: $(date)"
+
+      - name: Crear un archivo de prueba
+        run: |
+          echo "Contenido de mi archivo de prueba." > test-file.txt
+          cat test-file.txt # Muestra el contenido del archivo
+          ls -l # Lista los archivos para verificar
+
+      - name: Simular instalación de dependencias
+        run: echo "Simulando 'npm install' o 'pip install'..."
+
+      - name: Simular ejecución de pruebas
+        run: echo "Simulando 'npm test' o 'pytest'..."
